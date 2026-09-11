@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolution Simulation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Evolution Simulation</h1>
+            <div class="controls">
+                <button id="btn-play">Play</button>
+                <button id="btn-pause">Pause</button>
+                <button id="btn-step">Step</button>
+                <button id="btn-reset">Reset</button>
+            </div>
+            <div class="stats">
+                <span>Tick: <span id="stat-tick">0</span></span>
+                <span>Population: <span id="stat-pop">0</span></span>
+                <span id="ai-mode-label" class="mode-label">mockup testing</span>
+            </div>
+        </header>
+
+        <main>
+            <div id="grid-container">
+                <canvas id="hex-canvas" width="800" height="600"></canvas>
+            </div>
+
+            <aside id="agent-panel">
+                <h2>Agent Details</h2>
+                <div id="agent-info">
+                    <p>Select an agent on the grid to view details.</p>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

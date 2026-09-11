@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  evo-sim:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+    environment:
+      - FLASK_ENV=development
+      # Leave empty for mock mode; set in a local .env or shell
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}

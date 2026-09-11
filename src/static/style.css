@@ -1,0 +1,171 @@
+:root {
+    --bg-dark: #121212;
+    --bg-panel: #1e1e1e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #aaaaaa;
+    --accent: #4caf50;
+    --hex-border: #333333;
+    --hex-fill: #242424;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--bg-panel);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.controls button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.controls button:hover {
+    background-color: #555;
+}
+
+.controls button#btn-play {
+    background-color: var(--accent);
+    color: black;
+}
+
+.controls button#btn-play:hover {
+    background-color: #45a049;
+}
+
+.mode-label {
+    background: #ffb142;
+    color: black;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.mode-label.real {
+    background: #4caf50;
+}
+
+.stats {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+#grid-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-color: #0a0a0a;
+}
+
+canvas {
+    cursor: crosshair;
+}
+
+aside {
+    width: 350px;
+    background-color: var(--bg-panel);
+    border-left: 1px solid #333;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+.trait-tag {
+    display: inline-block;
+    background: #333;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin: 0.2rem;
+    font-size: 0.85rem;
+}
+
+.dominant {
+    border-left: 3px solid #ff5252;
+}
+
+.dormant {
+    border-left: 3px solid #ffb142;
+}
+
+.weak {
+    border-left: 3px solid #706fd3;
+}
+
+.active {
+    background: #4caf50;
+    color: black;
+    font-weight: bold;
+}
+
+.log-entry {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    border-left: 2px solid #555;
+    padding-left: 0.5rem;
+}
+
+ul.vocab-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.vocab-list li {
+    background: #2b2b2b;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
